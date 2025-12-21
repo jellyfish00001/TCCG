@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="C01" xml:space="preserve">
+    <value>登出系統，確定嗎？</value>
+  </data>
+  <data name="C02" xml:space="preserve">
+    <value>進行新增作業，確定嗎？</value>
+  </data>
+  <data name="C03" xml:space="preserve">
+    <value>進行修改作業，確定嗎？</value>
+  </data>
+  <data name="C04" xml:space="preserve">
+    <value>進行刪除作業，確定嗎？</value>
+  </data>
+  <data name="R01" xml:space="preserve">
+    <value>系統執行異常，請洽詢系統管理員</value>
+  </data>
+  <data name="P01" xml:space="preserve">
+    <value>叡揚資訊股份有限公司</value>
+  </data>
+  <data name="R02" xml:space="preserve">
+    <value>使用者代號或是密碼輸入錯誤，請重新登入系統</value>
+  </data>
+  <data name="P02" xml:space="preserve">
+    <value>SDO 框架展示</value>
+  </data>
+  <data name="R10" xml:space="preserve">
+    <value>{0}至{1}期間已有設定代理人！</value>
+  </data>
+  <data name="R09" xml:space="preserve">
+    <value>檔案不存在</value>
+  </data>
+  <data name="R08" xml:space="preserve">
+    <value>檔案上傳成功！</value>
+  </data>
+  <data name="R07" xml:space="preserve">
+    <value>{0}已存在，新增作業失敗！</value>
+  </data>
+  <data name="R06" xml:space="preserve">
+    <value>刪除作業成功！</value>
+  </data>
+  <data name="R05" xml:space="preserve">
+    <value>修改作業成功！</value>
+  </data>
+  <data name="R04" xml:space="preserve">
+    <value>新增作業成功！</value>
+  </data>
+  <data name="R03" xml:space="preserve">
+    <value>查詢無符合資料！</value>
+  </data>
+  <data name="P04" xml:space="preserve">
+    <value>系統即將登出...</value>
+  </data>
+  <data name="P03" xml:space="preserve">
+    <value>系統執行中，請稍後...</value>
+  </data>
+  <data name="C05" xml:space="preserve">
+    <value>進行排序作業，確定嗎？</value>
+  </data>
+  <data name="R11" xml:space="preserve">
+    <value>使用帳號數為零才能進行刪除作業</value>
+  </data>
+  <data name="R12" xml:space="preserve">
+    <value>請選擇...</value>
+  </data>
+  <data name="R13" xml:space="preserve">
+    <value>{0} 欄位是必要項。</value>
+    <comment>必填驗證訊息提示</comment>
+  </data>
+  <data name="R14" xml:space="preserve">
+    <value>{0} 已停用</value>
+    <comment>停用提示</comment>
+  </data>
+  <data name="P05" xml:space="preserve">
+    <value>上傳檔案限制10Mb</value>
+  </data>
+  <data name="R15" xml:space="preserve">
+    <value>{0} 不是合法的郵件地址。</value>
+    <comment>郵件格式驗證</comment>
+  </data>
+  <data name="C06" xml:space="preserve">
+    <value>送出流程作業，確定嗎？</value>
+  </data>
+  <data name="C07" xml:space="preserve">
+    <value>進行簽核作業，確定嗎？</value>
+  </data>
+  <data name="R16" xml:space="preserve">
+    <value>簽章驗證錯誤</value>
+  </data>
+  <data name="S01" xml:space="preserve">
+    <value>使用者代號字元長度不得大於50或小於 </value>
+  </data>
+  <data name="S02" xml:space="preserve">
+    <value>密碼長度不得小於 </value>
+  </data>
+  <data name="S03" xml:space="preserve">
+    <value>密碼不得與使用者代號或名稱相同</value>
+  </data>
+  <data name="S04" xml:space="preserve">
+    <value>密碼不得含有特殊字元</value>
+  </data>
+  <data name="S05" xml:space="preserve">
+    <value>密碼所含特殊字元個數不得小於 </value>
+  </data>
+  <data name="S06" xml:space="preserve">
+    <value>密碼必須為文數字組合</value>
+  </data>
+  <data name="S07" xml:space="preserve">
+    <value>密碼相鄰兩字元不得相同</value>
+  </data>
+  <data name="S08" xml:space="preserve">
+    <value>密碼相鄰三字元不可為連續升冪或降冪</value>
+  </data>
+  <data name="S09" xml:space="preserve">
+    <value>新密碼不得於過去 </value>
+  </data>
+  <data name="S10" xml:space="preserve">
+    <value>次重複</value>
+  </data>
+  <data name="S11" xml:space="preserve">
+    <value>同一天連續輸入密碼錯誤超過</value>
+  </data>
+  <data name="S12" xml:space="preserve">
+    <value>同一天非連續輸入密碼錯誤超過</value>
+  </data>
+  <data name="S13" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="S14" xml:space="preserve">
+    <value>，帳號鎖定</value>
+  </data>
+  <data name="R17" xml:space="preserve">
+    <value>非建立者，更新失敗</value>
+  </data>
+  <data name="R18" xml:space="preserve">
+    <value>更新作業失敗！郵件已寄出</value>
+  </data>
+  <data name="R19" xml:space="preserve">
+    <value>刪除作業失敗！郵件已寄出</value>
+  </data>
+  <data name="S15" xml:space="preserve">
+    <value>圖形驗證失敗，請更新驗證碼</value>
+  </data>
+  <data name="S16" xml:space="preserve">
+    <value>註冊成功，請至電子郵件信箱收信!</value>
+  </data>
+  <data name="S17" xml:space="preserve">
+    <value>認證成功!</value>
+  </data>
+</root>

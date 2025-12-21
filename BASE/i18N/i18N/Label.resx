@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmpUser_USER_ID" xml:space="preserve">
+    <value>使用者帳號</value>
+  </data>
+  <data name="EmpOrg_ORG_ID" xml:space="preserve">
+    <value>組織代碼</value>
+  </data>
+  <data name="EmpUser_USER_NAME" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="EmpOrg_ORG_NAME" xml:space="preserve">
+    <value>組織名稱</value>
+  </data>
+  <data name="Login_i18N" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="EmpUser_USER_SECRET" xml:space="preserve">
+    <value>登入密碼</value>
+  </data>
+  <data name="EmpOrg_PARENT_ID" xml:space="preserve">
+    <value>上層組織</value>
+  </data>
+  <data name="EmpAgent_AGENT_ID" xml:space="preserve">
+    <value>設定代理者帳號</value>
+  </data>
+  <data name="EmpAgent_AGENT_FROM" xml:space="preserve">
+    <value>代理開始日期</value>
+  </data>
+  <data name="EmpAgent_AGENT_TO" xml:space="preserve">
+    <value>代理結束日期</value>
+  </data>
+  <data name="DimRole_ROLE_ID" xml:space="preserve">
+    <value>角色代碼</value>
+  </data>
+  <data name="DimRole_ROLE_NAME" xml:space="preserve">
+    <value>角色名稱</value>
+  </data>
+  <data name="DimRight_RIGHT_ID" xml:space="preserve">
+    <value>權限代碼</value>
+  </data>
+  <data name="DimRight_RIGHT_NAME" xml:space="preserve">
+    <value>權限名稱</value>
+  </data>
+  <data name="Login_LOGIN_ID" xml:space="preserve">
+    <value>登入帳號</value>
+  </data>
+  <data name="Login_LOGIN_SECRET" xml:space="preserve">
+    <value>登入密碼</value>
+  </data>
+  <data name="EmpUser_USER_EMAIL" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="SetFunction_FUNCTION_ID" xml:space="preserve">
+    <value>功能代碼</value>
+  </data>
+  <data name="SetFunction_FUNCTION_NAME" xml:space="preserve">
+    <value>功能名稱</value>
+  </data>
+  <data name="SetFunction_FUNCTION_URL" xml:space="preserve">
+    <value>網址</value>
+  </data>
+  <data name="SetFunction_PARENT_ID" xml:space="preserve">
+    <value>功能類別</value>
+  </data>
+  <data name="SetFunction_SORT_ID" xml:space="preserve">
+    <value>排序編號</value>
+  </data>
+  <data name="EmpUser_MAP_DimRole" xml:space="preserve">
+    <value>角色列表</value>
+  </data>
+  <data name="DimRole_MAP_DimRight" xml:space="preserve">
+    <value>權限列表</value>
+  </data>
+  <data name="DimRight_MAP_SetFunction" xml:space="preserve">
+    <value>功能列表</value>
+  </data>
+  <data name="EmpAgent_AGENT_DATE" xml:space="preserve">
+    <value>代理期間</value>
+  </data>
+  <data name="EmpAgent_AGENT_NAME" xml:space="preserve">
+    <value>代理帳號</value>
+  </data>
+  <data name="Announcement_DATE" xml:space="preserve">
+    <value>公告日期</value>
+  </data>
+  <data name="Announcement_COMMENT" xml:space="preserve">
+    <value>公告事項</value>
+  </data>
+  <data name="Announcement_ATTACHMENT" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="Announcement_TITLE" xml:space="preserve">
+    <value>公告標題</value>
+  </data>
+  <data name="ActiveList_FLOW_CODE" xml:space="preserve">
+    <value>流程代碼</value>
+  </data>
+  <data name="ActiveList_FLOW_AUDITOR" xml:space="preserve">
+    <value>關卡簽核者</value>
+  </data>
+  <data name="SetParam_SET_ITEM" xml:space="preserve">
+    <value>參數類別</value>
+  </data>
+  <data name="SetParam_SET_TYPE" xml:space="preserve">
+    <value>參數代碼</value>
+  </data>
+  <data name="SetParam_SET_VALUE" xml:space="preserve">
+    <value>參數數值</value>
+  </data>
+  <data name="SetParam_MEMO" xml:space="preserve">
+    <value>參數說明</value>
+  </data>
+  <data name="SetParamItem_SET_ITEM" xml:space="preserve">
+    <value>參數類別代碼</value>
+  </data>
+  <data name="SetParamItem_SET_ITEM_NAME" xml:space="preserve">
+    <value>參數類別</value>
+  </data>
+  <data name="SetParamItem_MEMO" xml:space="preserve">
+    <value>參數類別說明</value>
+  </data>
+  <data name="FlowRole_ROLE_ID" xml:space="preserve">
+    <value>角色代碼</value>
+  </data>
+  <data name="FlowRole_ROLE_NAME" xml:space="preserve">
+    <value>角色名稱</value>
+  </data>
+  <data name="FlowRole_USER_COUNT" xml:space="preserve">
+    <value>帳號數</value>
+  </data>
+  <data name="FlowRole_MAP_USER" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="eForm_FORM_ID" xml:space="preserve">
+    <value>表單代碼</value>
+  </data>
+  <data name="eForm_FLOW_TYPE" xml:space="preserve">
+    <value>表單類型</value>
+  </data>
+  <data name="eForm_FORM_NAME" xml:space="preserve">
+    <value>表單名稱</value>
+  </data>
+  <data name="eForm_EFFECTIVE_DATE" xml:space="preserve">
+    <value>有效日期</value>
+  </data>
+  <data name="eForm_EXPIRE_DATE" xml:space="preserve">
+    <value>到期日期</value>
+  </data>
+  <data name="eForm_MEMO" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="eForm_FLOW_ID" xml:space="preserve">
+    <value>表單使用流程</value>
+  </data>
+  <data name="eForm_ORG_ID" xml:space="preserve">
+    <value>表單應用單位</value>
+  </data>
+  <data name="FlowSet_FLOW_ID" xml:space="preserve">
+    <value>流程代碼</value>
+  </data>
+  <data name="FlowSet_FLOW_NAME" xml:space="preserve">
+    <value>流程名稱</value>
+  </data>
+  <data name="FlowSet_MEMO" xml:space="preserve">
+    <value>流程說明</value>
+  </data>
+  <data name="FlowSet_EFFECTIVE_DATE" xml:space="preserve">
+    <value>有效日期</value>
+  </data>
+  <data name="FlowSet_EXPIRE_DATE" xml:space="preserve">
+    <value>到期日期</value>
+  </data>
+  <data name="FlowSet_FORM_COUNT" xml:space="preserve">
+    <value>表單數</value>
+  </data>
+  <data name="FlowSet_ENABLE_FLG" xml:space="preserve">
+    <value>是否啟用</value>
+  </data>
+  <data name="FlowSetDetail_SET_ROLE_ID" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="FlowSetDetail_SET_USER_ID" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="FlowSetDetail_SET_FLOW_ID" xml:space="preserve">
+    <value>流程</value>
+  </data>
+  <data name="FlowSetDetail_STAGE_SETTING" xml:space="preserve">
+    <value>關卡設定</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_MAIL" xml:space="preserve">
+    <value>MAIL 通知</value>
+  </data>
+  <data name="FlowSetDetail_SET_DECISION" xml:space="preserve">
+    <value>是否決行</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_SIGNATURE" xml:space="preserve">
+    <value>是否簽章</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_CERTIFICATE" xml:space="preserve">
+    <value>檢查憑證</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_SEALED" xml:space="preserve">
+    <value>是否封存</value>
+  </data>
+  <data name="FlowSetDetail_STAGE" xml:space="preserve">
+    <value>批核關卡</value>
+  </data>
+  <data name="SqlLog_LOG_DATE" xml:space="preserve">
+    <value>日誌日期</value>
+  </data>
+  <data name="FlowSetDetail_SET_ORG_ID" xml:space="preserve">
+    <value>單位</value>
+  </data>
+  <data name="MailRole_ROLE_ID" xml:space="preserve">
+    <value>角色代碼</value>
+  </data>
+  <data name="MailRole_ROLE_NAME" xml:space="preserve">
+    <value>角色名稱</value>
+  </data>
+  <data name="MailRole_USER_COUNT" xml:space="preserve">
+    <value>帳號數</value>
+  </data>
+  <data name="MailRole_MAP_USER" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="MailSet_MAIL_ID" xml:space="preserve">
+    <value>範本代碼</value>
+  </data>
+  <data name="MailSet_MAIL_NAME" xml:space="preserve">
+    <value>範本名稱</value>
+  </data>
+  <data name="MailSet_MAIL_SUBJECT" xml:space="preserve">
+    <value>郵件主旨</value>
+  </data>
+  <data name="MailSet_TAB_MAIL_ADDRESS" xml:space="preserve">
+    <value>寄、收件者</value>
+  </data>
+  <data name="MailSet_TYPE" xml:space="preserve">
+    <value>郵寄類型</value>
+  </data>
+  <data name="MailSet_MAIL_ROLE" xml:space="preserve">
+    <value>郵件角色</value>
+  </data>
+  <data name="MailSet_EMAIL" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="MailSet_MAIL_ADDRESS" xml:space="preserve">
+    <value>電子郵件信箱</value>
+  </data>
+  <data name="MailSet_MAIL_TITLE" xml:space="preserve">
+    <value>郵件抬頭</value>
+  </data>
+  <data name="MailSet_MAIL_CONTENT" xml:space="preserve">
+    <value>郵件內文</value>
+  </data>
+  <data name="MailSet_TARGET" xml:space="preserve">
+    <value>對象</value>
+  </data>
+  <data name="MailSet_TAB_TEMPLATE" xml:space="preserve">
+    <value>範本</value>
+  </data>
+  <data name="MailLog_LOG_DATE" xml:space="preserve">
+    <value>寄送日期</value>
+  </data>
+  <data name="MailLog_MAIL_SENDER" xml:space="preserve">
+    <value>寄件者</value>
+  </data>
+  <data name="MailLog_MAIL_RECEIVER" xml:space="preserve">
+    <value>收件者</value>
+  </data>
+  <data name="MailLog_CC_RECEIVER" xml:space="preserve">
+    <value>副本</value>
+  </data>
+  <data name="MailLog_BCC_RECEIVER" xml:space="preserve">
+    <value>密件</value>
+  </data>
+  <data name="MailLog_SEND_FLG" xml:space="preserve">
+    <value>寄送狀態</value>
+  </data>
+  <data name="Chart_CHART_TITLE" xml:space="preserve">
+    <value>來高雄市觀光人數</value>
+  </data>
+  <data name="Chart_FRIDAY" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="Chart_LOCALS" xml:space="preserve">
+    <value>當地人</value>
+  </data>
+  <data name="Chart_MONDAY" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="Chart_SATURDAY" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="Chart_SUNDAY" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="Chart_THURDAY" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="Chart_TUESDAY" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="Chart_VISITORS" xml:space="preserve">
+    <value>觀光客</value>
+  </data>
+  <data name="Chart_WEDNESDAY" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="ResourceUsage_CHART_TITLE" xml:space="preserve">
+    <value>資源使用狀況</value>
+  </data>
+  <data name="ResourceUsage_MINUTE" xml:space="preserve">
+    <value>分鐘</value>
+  </data>
+  <data name="EncryptDecrypt_DECRYPT" xml:space="preserve">
+    <value>解密</value>
+  </data>
+  <data name="EncryptDecrypt_DECRYPT_ERROR" xml:space="preserve">
+    <value>解密錯誤</value>
+  </data>
+  <data name="EncryptDecrypt_ENCRYPT" xml:space="preserve">
+    <value>加密</value>
+  </data>
+  <data name="EncryptDecrypt_ENCRYPT_ERROR" xml:space="preserve">
+    <value>加密失敗</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_DEFAULT" xml:space="preserve">
+    <value>預設</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_NULL" xml:space="preserve">
+    <value>輸入字串不得為空</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_SOURCE" xml:space="preserve">
+    <value>輸入字串</value>
+  </data>
+  <data name="EncryptDecrypt_KEY" xml:space="preserve">
+    <value>金鑰</value>
+  </data>
+  <data name="EncryptDecrypt_OUTPUT_STR" xml:space="preserve">
+    <value>輸出字串</value>
+  </data>
+  <data name="MailQueue_MAIL_CONTENT" xml:space="preserve">
+    <value>郵件內容</value>
+  </data>
+  <data name="MailQueue_MAIL_FROM" xml:space="preserve">
+    <value>寄件者</value>
+  </data>
+  <data name="MailQueue_MAIL_SUBJECT" xml:space="preserve">
+    <value>郵件主旨</value>
+  </data>
+  <data name="MailQueue_MAIL_TO" xml:space="preserve">
+    <value>收件者</value>
+  </data>
+  <data name="MailQueue_CRT_DATE" xml:space="preserve">
+    <value>建立日期</value>
+  </data>
+  <data name="MailQueue_SEND_FLG" xml:space="preserve">
+    <value>寄出狀態</value>
+  </data>
+  <data name="MailQueue_SENT" xml:space="preserve">
+    <value>已送出</value>
+  </data>
+  <data name="MailQueue_TAB_TEMPLATE" xml:space="preserve">
+    <value>範本</value>
+  </data>
+  <data name="MailQueue_UNSEND" xml:space="preserve">
+    <value>未送出</value>
+  </data>
+  <data name="MailQueue_SEND_TIME" xml:space="preserve">
+    <value>寄件時間</value>
+  </data>
+</root>

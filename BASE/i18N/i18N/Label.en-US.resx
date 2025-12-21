@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmpUser_USER_ID" xml:space="preserve">
+    <value>User Id</value>
+  </data>
+  <data name="EmpOrg_ORG_ID" xml:space="preserve">
+    <value>Organization Id</value>
+  </data>
+  <data name="EmpUser_USER_NAME" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="EmpOrg_ORG_NAME" xml:space="preserve">
+    <value>Organization Name</value>
+  </data>
+  <data name="Login_i18N" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="EmpUser_USER_SECRET" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="EmpOrg_PARENT_ID" xml:space="preserve">
+    <value>Parent Organization</value>
+  </data>
+  <data name="EmpAgent_AGENT_ID" xml:space="preserve">
+    <value>Agent Id</value>
+  </data>
+  <data name="EmpAgent_AGENT_FROM" xml:space="preserve">
+    <value>Agent Start Date</value>
+  </data>
+  <data name="EmpAgent_AGENT_TO" xml:space="preserve">
+    <value>Agent End Date</value>
+  </data>
+  <data name="DimRole_ROLE_ID" xml:space="preserve">
+    <value>Role Id</value>
+  </data>
+  <data name="DimRole_ROLE_NAME" xml:space="preserve">
+    <value>Role name</value>
+  </data>
+  <data name="DimRight_RIGHT_ID" xml:space="preserve">
+    <value>Right Id</value>
+  </data>
+  <data name="DimRight_RIGHT_NAME" xml:space="preserve">
+    <value>Right Name</value>
+  </data>
+  <data name="Login_LOGIN_ID" xml:space="preserve">
+    <value>Login Id</value>
+  </data>
+  <data name="Login_LOGIN_SECRET" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="SetFunction_FUNCTION_ID" xml:space="preserve">
+    <value>Function Id</value>
+  </data>
+  <data name="SetFunction_FUNCTION_NAME" xml:space="preserve">
+    <value>Function Name</value>
+  </data>
+  <data name="SetFunction_FUNCTION_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="SetFunction_PARENT_ID" xml:space="preserve">
+    <value>Function Group</value>
+  </data>
+  <data name="SetFunction_SORT_ID" xml:space="preserve">
+    <value>Sort Id</value>
+  </data>
+  <data name="EmpUser_USER_EMAIL" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmpUser_MAP_DimRole" xml:space="preserve">
+    <value>DimRole Map</value>
+  </data>
+  <data name="DimRole_MAP_DimRight" xml:space="preserve">
+    <value>DimRight Map</value>
+  </data>
+  <data name="DimRight_MAP_SetFunction" xml:space="preserve">
+    <value>SetFunction Map</value>
+  </data>
+  <data name="EmpAgent_AGENT_DATE" xml:space="preserve">
+    <value>Agent priod</value>
+  </data>
+  <data name="EmpAgent_AGENT_NAME" xml:space="preserve">
+    <value>Agent Name</value>
+  </data>
+  <data name="ActiveList_FLOW_CODE" xml:space="preserve">
+    <value>Flow Code</value>
+  </data>
+  <data name="ActiveList_FLOW_AUDITOR" xml:space="preserve">
+    <value>Auditors</value>
+  </data>
+  <data name="SetParam_SET_VALUE" xml:space="preserve">
+    <value>Set Value</value>
+  </data>
+  <data name="SetParam_SET_TYPE" xml:space="preserve">
+    <value>Set Type</value>
+  </data>
+  <data name="SetParam_SET_ITEM" xml:space="preserve">
+    <value>Set Item</value>
+  </data>
+  <data name="SetParam_MEMO" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="SetParamItem_SET_ITEM" xml:space="preserve">
+    <value>Set Item</value>
+  </data>
+  <data name="SetParamItem_SET_ITEM_NAME" xml:space="preserve">
+    <value>Set Item Name</value>
+  </data>
+  <data name="SetParamItem_MEMO" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="FlowRole_ROLE_ID" xml:space="preserve">
+    <value>Role Id</value>
+  </data>
+  <data name="FlowRole_ROLE_NAME" xml:space="preserve">
+    <value>Role name</value>
+  </data>
+  <data name="FlowRole_USER_COUNT" xml:space="preserve">
+    <value>Count of Account</value>
+  </data>
+  <data name="FlowRole_MAP_USER" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Announcement_DATE" xml:space="preserve">
+    <value>Announce Date</value>
+  </data>
+  <data name="Announcement_COMMENT" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
+  <data name="Announcement_ATTACHMENT" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="Announcement_TITLE" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="eForm_FORM_ID" xml:space="preserve">
+    <value>Form ID</value>
+  </data>
+  <data name="eForm_FLOW_TYPE" xml:space="preserve">
+    <value>Form Type</value>
+  </data>
+  <data name="eForm_FORM_NAME" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="eForm_EFFECTIVE_DATE" xml:space="preserve">
+    <value>Effective Date</value>
+  </data>
+  <data name="eForm_EXPIRE_DATE" xml:space="preserve">
+    <value>Expire Date</value>
+  </data>
+  <data name="eForm_MEMO" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="eForm_FLOW_ID" xml:space="preserve">
+    <value>eForm Flow</value>
+  </data>
+  <data name="eForm_ORG_ID" xml:space="preserve">
+    <value>eForm ORGs</value>
+  </data>
+  <data name="FlowSet_FLOW_ID" xml:space="preserve">
+    <value>Flow Code</value>
+  </data>
+  <data name="FlowSet_FLOW_NAME" xml:space="preserve">
+    <value>Flow Name</value>
+  </data>
+  <data name="FlowSet_MEMO" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="FlowSet_EFFECTIVE_DATE" xml:space="preserve">
+    <value>Effective Date</value>
+  </data>
+  <data name="FlowSet_EXPIRE_DATE" xml:space="preserve">
+    <value>Expire Date</value>
+  </data>
+  <data name="FlowSet_FORM_COUNT" xml:space="preserve">
+    <value>Count of Form</value>
+  </data>
+  <data name="FlowSet_ENABLE_FLG" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="FlowSetDetail_SET_DECISION" xml:space="preserve">
+    <value>Enable Decision</value>
+  </data>
+  <data name="FlowSetDetail_SET_FLOW_ID" xml:space="preserve">
+    <value>Flow</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_CERTIFICATE" xml:space="preserve">
+    <value>Enable Certificate</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_MAIL" xml:space="preserve">
+    <value>Mail Notification</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_SEALED" xml:space="preserve">
+    <value>Enable Seal</value>
+  </data>
+  <data name="FlowSetDetail_SET_OPTION_SIGNATURE" xml:space="preserve">
+    <value>Enable Signature</value>
+  </data>
+  <data name="FlowSetDetail_SET_ROLE_ID" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="FlowSetDetail_SET_USER_ID" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="FlowSetDetail_STAGE" xml:space="preserve">
+    <value>Approve Stage</value>
+  </data>
+  <data name="FlowSetDetail_STAGE_SETTING" xml:space="preserve">
+    <value>Stage Setting</value>
+  </data>
+  <data name="SqlLog_LOG_DATE" xml:space="preserve">
+    <value>Log Date</value>
+  </data>
+  <data name="FlowSetDetail_SET_ORG_ID" xml:space="preserve">
+    <value>Org</value>
+  </data>
+  <data name="MailRole_ROLE_ID" xml:space="preserve">
+    <value>Role ID</value>
+  </data>
+  <data name="MailRole_ROLE_NAME" xml:space="preserve">
+    <value>Role Name</value>
+  </data>
+  <data name="MailRole_USER_COUNT" xml:space="preserve">
+    <value>Count of Account</value>
+  </data>
+  <data name="MailRole_MAP_USER" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="MailSet_MAIL_ID" xml:space="preserve">
+    <value>Mail Template ID</value>
+  </data>
+  <data name="MailSet_MAIL_NAME" xml:space="preserve">
+    <value>Mail Template Name</value>
+  </data>
+  <data name="MailSet_MAIL_SUBJECT" xml:space="preserve">
+    <value>Mail Subject</value>
+  </data>
+  <data name="MailSet_TAB_MAIL_ADDRESS" xml:space="preserve">
+    <value>Mail Address</value>
+  </data>
+  <data name="MailSet_TYPE" xml:space="preserve">
+    <value>Mail Type</value>
+  </data>
+  <data name="MailSet_MAIL_ROLE" xml:space="preserve">
+    <value>Mail Role</value>
+  </data>
+  <data name="MailSet_EMAIL" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="MailSet_MAIL_TITLE" xml:space="preserve">
+    <value>Mail Title</value>
+  </data>
+  <data name="MailSet_MAIL_ADDRESS" xml:space="preserve">
+    <value>Mail Address</value>
+  </data>
+  <data name="MailSet_MAIL_CONTENT" xml:space="preserve">
+    <value>Mail Content</value>
+  </data>
+  <data name="MailSet_TARGET" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="MailSet_TAB_TEMPLATE" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="MailLog_LOG_DATE" xml:space="preserve">
+    <value>Log Date</value>
+  </data>
+  <data name="MailLog_MAIL_SENDER" xml:space="preserve">
+    <value>Mail Sender</value>
+  </data>
+  <data name="MailLog_MAIL_RECEIVER" xml:space="preserve">
+    <value>Mail Receiver</value>
+  </data>
+  <data name="MailLog_CC_RECEIVER" xml:space="preserve">
+    <value>CC</value>
+  </data>
+  <data name="MailLog_BCC_RECEIVER" xml:space="preserve">
+    <value>Bcc</value>
+  </data>
+  <data name="MailLog_SEND_FLG" xml:space="preserve">
+    <value>Send Status</value>
+  </data>
+  <data name="Chart_CHART_TITLE" xml:space="preserve">
+    <value>Visitors to Kaohsiung</value>
+  </data>
+  <data name="Chart_FRIDAY" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="Chart_LOCALS" xml:space="preserve">
+    <value>Locals</value>
+  </data>
+  <data name="Chart_MONDAY" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="Chart_SATURDAY" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Chart_SUNDAY" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Chart_THURDAY" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="Chart_TUESDAY" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="Chart_VISITORS" xml:space="preserve">
+    <value>Visitors</value>
+  </data>
+  <data name="Chart_WEDNESDAY" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="ResourceUsage_CHART_TITLE" xml:space="preserve">
+    <value>Resources usage</value>
+  </data>
+  <data name="ResourceUsage_MINUTE" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="EncryptDecrypt_DECRYPT" xml:space="preserve">
+    <value>Decrypt</value>
+  </data>
+  <data name="EncryptDecrypt_DECRYPT_ERROR" xml:space="preserve">
+    <value>Decrypt failed</value>
+  </data>
+  <data name="EncryptDecrypt_ENCRYPT" xml:space="preserve">
+    <value>Encrypt</value>
+  </data>
+  <data name="EncryptDecrypt_ENCRYPT_ERROR" xml:space="preserve">
+    <value>Encrypt failed</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_DEFAULT" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_NULL" xml:space="preserve">
+    <value>Input cannot be null value!</value>
+  </data>
+  <data name="EncryptDecrypt_INPUT_SOURCE" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="EncryptDecrypt_KEY" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="EncryptDecrypt_OUTPUT_STR" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="MailQueue_MAIL_CONTENT" xml:space="preserve">
+    <value>Mail Content</value>
+  </data>
+  <data name="MailQueue_MAIL_FROM" xml:space="preserve">
+    <value>Mail Sender</value>
+  </data>
+  <data name="MailQueue_MAIL_SUBJECT" xml:space="preserve">
+    <value>Mail Subject</value>
+  </data>
+  <data name="MailQueue_MAIL_TO" xml:space="preserve">
+    <value>Mail Receiver</value>
+  </data>
+  <data name="MailQueue_CRT_DATE" xml:space="preserve">
+    <value>Create Date</value>
+  </data>
+  <data name="MailQueue_SEND_FLG" xml:space="preserve">
+    <value>Send Status</value>
+  </data>
+  <data name="MailQueue_SENT" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="MailQueue_TAB_TEMPLATE" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="MailQueue_UNSEND" xml:space="preserve">
+    <value>Unsend</value>
+  </data>
+  <data name="MailQueue_SEND_TIME" xml:space="preserve">
+    <value>Send Time</value>
+  </data>
+</root>
