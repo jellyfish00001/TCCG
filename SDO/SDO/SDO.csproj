@@ -1,0 +1,154 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>be6e265c-02ed-4010-aeaa-7d4a7978b640</UserSecretsId>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="License\Aspose.Total.655.lic" />
+    <None Remove="TemplateFile\SampleReport.xls" />
+    <None Remove="TemplateFile\SDOWord套表元件說明.doc" />
+    <None Remove="TemplateFile\測試匯出報表.docx" />
+    <None Remove="TemplateFile\測試匯出報表.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="License\Aspose.Total.655.lic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TemplateFile\SampleReport.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TemplateFile\SDOWord套表元件說明.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TemplateFile\測試匯出報表.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.BarCode" Version="20.6.0" />
+    <PackageReference Include="Aspose.Cells" Version="20.6.0" />
+    <PackageReference Include="Aspose.PDF" Version="20.6.0" />
+    <PackageReference Include="Aspose.Words" Version="20.6.0" />
+    <PackageReference Include="CoreWCF.Http" Version="1.1.0" />
+    <PackageReference Include="CoreWCF.Primitives" Version="1.1.0" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="DotNetZip" Version="1.13.7" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="3.1.5" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="NLog" Version="4.7.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.2" />
+    <PackageReference Include="System.Data.Odbc" Version="4.7.0" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.7.0" />
+    <PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="6.0.1" />
+    <PackageReference Include="System.Security.Permissions" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.9.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BASE\SDO.Base\SDO.Base.csproj" />
+    <ProjectReference Include="..\..\BASE\SDO.LOG\SDO.LOG.csproj" />
+    <ProjectReference Include="..\..\BASE\SDO.XlsReader\SDO.XlsReader.csproj" />
+    <ProjectReference Include="..\SDO.APP\SDO.APP.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SDO.AsposeSet">
+      <HintPath>..\..\library\SDO.AsposeSet.dll</HintPath>
+    </Reference>
+    <Reference Include="SDO.CryptSet">
+      <HintPath>..\..\library\SDO.CryptSet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TemplateFile\Excel\IPCProjectAreaDetailedRPT.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\IPCProjectAreaShortRPT.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\IPCProjectBudgetExecRPT.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\IPCProjectDeptDetailedRPT.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\IPCProjectDeptShortRPT.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\IPCProjectFillYearAssRPT.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\ProjectDelayListRPT.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\ProjectSyncLogRPT.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\ProjectUnFilledListRPT.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Excel\UnitingQuery.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\CheckpointExpirationNoticeForMailRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\CheckpointExpirationNoticeRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\DelayStatisticsRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\DemoWordTemplate.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\IPCProjectADJDetailedRPTCheckpoint.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\IPCProjectADJDetailedRPTRunwayC.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\IPCProjectADJShortRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\IPCProjectStatisticsRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\ProjectFillYearAssRPT.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\ProjectSyncLogRPT.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TemplateFile\Word\RPTAdjustSchedule.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
