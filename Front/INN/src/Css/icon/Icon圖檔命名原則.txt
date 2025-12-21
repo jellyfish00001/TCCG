@@ -1,0 +1,7 @@
+1. For系統顏色有三種
+	(1) 藍色：檔案存於blue資料夾內，設定位於 basic-blue.css 中設定。
+	(2) 綠色：檔案存於green資料夾內，設定位於 basic-green.css 中設定。
+	(3) 褐色：檔案存於brown資料夾內，設定位於 basic-brown.css 中設定。
+
+2. 其餘顏色皆標示清楚，位於 Site.css / login.css 中設定。
+3. 關鍵字搜尋：Icon替換圖檔。

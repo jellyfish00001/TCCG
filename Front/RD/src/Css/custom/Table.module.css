@@ -1,0 +1,172 @@
+table.fullWidth{
+    width:100%;
+}
+
+
+th.textAlign_left,td.textAlign_left{
+    text-align: left;
+}
+
+th.textAlign_center,td.textAlign_center{
+    text-align: center!important
+}
+
+th.break_spaces,td.break_spaces{
+    white-space:normal!important;
+}
+
+
+th.textAlign_right,td.textAlign_right{
+    text-align: right!important
+}
+
+.addRedStar:before {
+    content: '*';
+    color: red;
+    font-size: 25px;
+    z-index: 1;
+    margin-left: -12px;
+}
+
+.gridTable{
+
+}
+
+
+.gridTable th{
+    background-color: var(--selected-grid-bg);
+    color: white;
+    padding: 3px 15px;
+}
+
+
+.gridTable td{
+    background-color: white;
+    padding: 3px 15px;
+}
+
+.h3 {
+    font-size: 1.3rem;
+}
+
+.h4 {
+    font-size: 1.2rem;
+}
+
+.formStatusTable{
+    
+}
+
+
+.formStatusTable th{
+    background-color: var(--selected-grid-bg);
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    border-right: 1px solid white;
+    border-bottom: 5px solid white;
+}
+
+
+.formStatusTable td{
+    background-color: var(--selected-fnForm-bg);
+    text-align: center;
+    padding: 3px 15px;
+    border-radius: none;
+    border-bottom:var(--selected-fnbuttons-border);
+    border-:var(--selected-fnbuttons-border);
+}
+
+.formStatusTable .title{
+    background-color: var(--selected-tabledirectory-bg); 
+    text-align:left;
+
+    font-weight: bold;    
+    color: #000;    
+    padding:5px; 
+}
+.formStatusTable a {
+    color:var(--selected-tabledirectory-a-color);
+}
+
+.formStatusTable td.SECTION_LEVEL2{
+    /* background-color: rgb(187, 187, 187); */
+    background-color: none !important;
+	padding: 0px 0px 0px 45px !important;
+    
+}
+
+.formStatusTable td.SECTION_LEVEL2 span{
+    margin-left: 45px !important;
+    border-left:var(--selected-formStatusTable3-border);
+    padding: 0px 10px 0px 10px !important;
+    
+}
+
+/* .formStatusTable td:nth-child(2){
+    text-align: left;
+} */
+
+
+.formStatusTable td.textAlign_left{
+    text-align: left;
+}
+
+
+.formStatusTable .underline{
+    text-decoration: underline;
+}
+
+.formStatusTable .underline:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+.formStatusTable .IsDone{
+    text-decoration: underline;
+}
+
+.formStatusTable .IsNotDone{
+    color:red;
+    text-decoration: underline;
+}
+
+
+
+.customTable {}
+
+.customTable th {
+    background-color: var(--selected-grid-bg);
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    border-right: 1px solid white;
+    border-bottom: 5px solid white;
+}
+
+.customTable td {
+    background-color: var(--selected-grid-bg);
+    text-align: center;
+    color: white;
+    padding: 3px 15px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    opacity: 0.7;
+}
+
+.customTable td:nth-child(2) {
+    text-align: left;
+}
+
+.gridTextCenter  th span{
+    text-align: center ;
+}
+
+
+.gridTextCenter td{
+    text-align: center;
+}
+
+.floatErrorMsg div:nth-child(2) div{
+    float:right
+}

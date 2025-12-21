@@ -1,0 +1,4 @@
+.k-grid .k-grid-content td {
+    word-wrap: break-word;
+    white-space: normal !important;
+}

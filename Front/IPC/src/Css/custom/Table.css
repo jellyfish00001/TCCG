@@ -1,0 +1,22 @@
+.gridTable{
+    border-collapse: separate;
+}
+
+
+.gridTable th{
+    background-color: var(--selected-grid-bg);
+    color: white;
+    padding: 3px 1%;
+}
+
+
+.gridTable td{
+    background-color: var(--selected-grid-odd-bg);
+    padding: 3px 1%;
+}
+
+.tdMultiline{
+    white-space: normal !important ;
+    word-wrap: break-word; 
+    word-break: break-all;
+}

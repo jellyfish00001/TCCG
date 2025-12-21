@@ -1,0 +1,39 @@
+.upload_File .k-upload {
+    border-style: none !important;
+    background-color: transparent !important;
+}
+
+.upload_File .k-upload .k-dropzone {
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+
+.upload_File .k-upload .k-dropzone:before {
+    content: '' !important;
+}
+
+.upload_File .k-upload .k-dropzone .k-dropzone-hint {
+    display: none !important;
+}
+
+.upload_File h5 {
+    display: none !important;
+}
+
+.upload_File .k-upload-status{
+    display: none !important;
+}
+
+.k-progressbar {
+    background-color: transparent;
+}
+
+.k-upload-button span::before{
+    content: "\f093";
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.k-upload .k-upload-button {
+    min-width: 3em;
+    padding:2px 5px;
+}

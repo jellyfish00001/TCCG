@@ -1,0 +1,74 @@
+.mapIcon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.mapIcon-P {
+    margin-right: 10px;
+}
+
+.refresh:before {
+    content: url('icon/mapIcon/refresh.svg');
+}
+
+.refresh-G:before {
+    content: url('icon/mapIcon/refresh-g.svg');
+}
+
+.refresh-R:before {
+    content: url('icon/mapIcon/refresh-r.svg');
+}
+
+.refresh-Y:before {
+    content: url('icon/mapIcon/refresh-y.svg');
+}
+
+.cog:before {
+    content: url('icon/mapIcon/cog.svg');
+}
+
+.cog-G:before {
+    content: url('icon/mapIcon/cog-g.svg');
+}
+
+.cog-R:before {
+    content: url('icon/mapIcon/cog-r.svg');
+}
+
+.cog-Y:before {
+    content: url('icon/mapIcon/cog-y.svg');
+}
+
+.check:before {
+    content: url('icon/mapIcon/check.svg');
+}
+
+.check-G:before {
+    content: url('icon/mapIcon/check-g.svg');
+}
+
+.check-R:before {
+    content: url('icon/mapIcon/check-r.svg');
+}
+
+.check-Y:before {
+    content: url('icon/mapIcon/check-y.svg');
+}
+
+.regionImgLabel {
+    background-color: #66B3FF;
+    color: #FFFFFF;
+    padding: 1px 3px;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 12px;
+}
+
+.btnStageClickState {
+    background-color: var(--blue-fnbuttons-hover-bg) !important;
+}
+
+.btnOffsetClickState {
+    border: black solid !important;
+}

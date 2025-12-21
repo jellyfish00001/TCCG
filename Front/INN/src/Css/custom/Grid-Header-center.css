@@ -1,0 +1,8 @@
+.k-grid .k-grid-header th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.breakSpacehHeader > span{
+    white-space: break-spaces;
+}

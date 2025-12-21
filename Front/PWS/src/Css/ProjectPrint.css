@@ -1,0 +1,178 @@
+
+
+.page {
+    background-color: #fff;
+    top: 0px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    bottom: 0px;
+    height: 100%;
+    font-family: '標楷體', 'calibri', arial, 'Microsoft JhengHei', sans-serif !important;
+    
+}
+.page .collapse-title-first {
+    margin: 55px 0px 5px 0px !important;
+    height: auto;
+    /*line-height: 35px;*/
+    padding: 7px 10px;
+}
+
+
+.page .full-fixed-buttons {
+    padding: 25px 5px 4px 5px;
+    background: #fff;
+    height: 70px;
+
+}
+
+.page .k-dropdown .k-dropdown-wrap {
+    margin: 1px;
+}
+
+.page h3 {
+    font-weight: normal !important;
+    font-size: 20px;
+}
+
+.page .collapse-title {
+    color:#000;
+    background:rgba(109,165,114,0.7);
+    font-size:14pt;
+    height: auto !important;
+    /*line-height: 26px !important;*/
+    padding: 5px 10px 2px 10px !important;
+}
+
+.page .collapse-title img{
+    width:20px;
+    margin:2px 0px 2px 5px;
+}
+
+
+.page h4 {
+    margin:5px 0px 0px 0px;
+}
+
+.page p {
+    font-size: 14pt;
+
+}
+
+
+
+/*--表格--*/
+.page form th {    
+    background:rgb(222, 234, 246);
+    color:#000;
+    border:1px solid #000;
+    padding: 4.62pt;
+    vertical-align: middle;
+    }
+
+
+.page form td {
+    border: 1px solid #000;
+    padding: 4.62pt;
+    vertical-align: middle;
+    }
+
+.page .k-grid .k-grid-header {
+    background:rgb(222, 234, 246);
+    }
+
+.page .k-grid .k-grid-header th {
+    color:#000;
+    }
+
+
+    .page .k-grid .k-grid-content td {
+        border-top: 1px solid #000;
+        background:#fff;
+
+    }
+    
+    .page .k-grid td {
+        border-color: rgba(0, 0, 0, 1);
+    }
+
+    .page .k-header, .page th.k-header {
+        border-color: rgba(0, 0, 0, 1) !important;
+
+    }
+
+    .page .k-grid th {
+        border-width: 0 0 1px 1px;
+
+    }
+
+    .page .k-grid {
+        border-color: rgba(0, 0, 0, 1);
+           
+    }
+
+    .page .k-child-animation-container table {
+        border-collapse: collapse; 
+    }
+
+
+
+
+
+.page .fn-buttons .k-button.export-Print  {
+    background-image:url(../Css/icon/mapIcon/icon_print.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border:none;
+}
+
+.page .fn-buttons .k-button.export-DOCX  {
+    background-image:url(../Css/icon/mapIcon/icon_doc.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border:none;
+}
+
+.page .fn-buttons .k-button.export-PDF  {
+    background-image:url(../Css/icon/mapIcon/icon_pdf.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border:none;
+}
+
+.page .fn-buttons .k-button.export-ODT  {
+    background-image:url(../Css/icon/mapIcon/icon_odt.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border:none;
+}
+
+.page .k-child-animation-container table th, .navOpen table th {
+    text-indent: 0px;
+}
+
+
+@media print {
+    .fn-buttons {
+        display: none;
+    }
+
+    table { 
+        page-break-inside:auto 
+    }
+
+    #globalOverlay {
+        display: none;
+    }
+
+    @page {
+        margin: 10mm;
+    }
+}

@@ -1,0 +1,8 @@
+.k-radio{
+    border-color: rgba(0,0,0,0.54);
+}
+
+.k-radio:hover{
+    border-color: rgba(0,0,0,0.87);
+    cursor: pointer;
+}

@@ -1,0 +1,126 @@
+label.title{
+    font-size: 20px;
+}
+
+
+
+.underline{
+    text-decoration: none;
+    /*color:blue;*/
+    color:#065dae;
+    font-size:16px;
+}
+
+.underline:hover {
+    color:#065dae;
+}
+
+span.red{
+    color:red;
+}
+
+span.textOverFlow,td.textOverFlow{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+ /*回頁首*/
+ .gototop {
+    position: fixed;
+    bottom: 75px;
+    right: 60px;
+    z-index: 1;
+}
+
+.gototop div {
+	/* display:block; */
+    color: #fff;
+}
+
+.gototop a {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.gototop a:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+
+.gototop a:hover, .gototop a:active, .gototop a:focus {
+  text-decoration: none;
+  outline: none;
+  color:#ffffff;
+}
+
+
+span.textBreakLine{
+    white-space: pre-line;
+}
+
+@media screen and (min-width: 500px) {
+    span.textOverFlow.short_text_ellipsis {
+        width:200px
+    }
+    span.textOverFlow.long_text_ellipsis {
+        width:500px
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    span.textOverFlow.short_text_ellipsis {
+        width:100px
+    }
+    span.textOverFlow.long_text_ellipsis {
+        width:300px
+    }
+}
+
+
+input.disabled{
+    background-color: darkgrey;
+}
+
+ul.styledList{
+    background-color: var(--selected-form-th-bg);;
+    color:  var(--selected-menu-color);
+    list-style: none;
+}
+
+ul.styledList li{
+    border-bottom: 1pt solid white;
+}
+
+.unSelected {
+    border:none;
+    color: black;
+    background-color:#d2deef;
+}
+.selected{
+    background-color: var(--selected-grid-bg);
+    color: white;
+    border:none;
+}
+
+.numericTextInput_textAlign_right > span > input{
+    text-align: right;
+}
+
+.editIcon{
+    display: none;
+}
+
+.editGridCell .editIcon:hover{
+    display: block;
+}
+
+
+
+

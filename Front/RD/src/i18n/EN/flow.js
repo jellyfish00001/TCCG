@@ -1,0 +1,60 @@
+export const flow = {
+    "activeflow": {
+        "activeflow01": "Flow Detail",
+        "activeflow02": "Flow Code",
+        "activeflow03": "Current Flow Stage",
+        "activeflow04": "Latest Update Time"
+    },
+    "flowDetail": {
+        "flowDetail01": "Would you like to cancel this flow？",
+        "flowDetail02": "Would you like to reset this flow？",
+        "flowDetail03": "Would you like to cancel this subflow？",
+        "flowDetail04": "Cancel Flow",
+        "flowDetail05": "Reset Flow",
+        "flowDetail06": "Cancel Subflow",
+        "flowDetail07": "Flow Stage",
+        "flowDetail08": "Flow Code",
+        "flowDetail09": "Sign-off Status",
+        "flowDetail10": "Sign-off Time",
+        "flowDetail11": "Subflow Stage",
+        "flowDetail12": "Subflow Code",
+        "flowDetail13": "Subflow Sign-off Status",
+        "flowDetail14": "Subflow Sign-off Time"
+    },
+    "flowRole": {
+        "flowRole01": "Role ID",
+        "flowRole02": "Role Name",
+        "flowRole03": "Number of Accounts",
+        "flowRole04": "FlowRole - Create",
+        "flowRole05": "FlowRole - Update"
+    },
+    "flowSet": {
+        "flowSet01": "FlowSet - Create",
+        "flowSet02": "FlowSet - Update",
+        "flowSet03": "FlowStageSet - Create",
+        "flowSet04": "FlowStageSet - Update",
+        "flowSet05": "Flow Name",
+        "flowSet06": "Memo",
+        "flowSet07": "Status",
+        "flowSet08": "Enable",
+        "flowSet09": "Disable",
+        "flowSet10": "Number of eForms",
+        "flowSet11": "Create Stage",
+        "flowSet12": "Stage Name",
+        "flowSet13": "Mail Notification",
+        "flowSet14": "Decisive",
+        "flowSet15": "Signature",
+        "flowSet16": "Certificate Check",
+        "flowSet17": "Archive",
+        "flowSet18": "Flow Code",
+        "flowSet19": "Query Date",
+        "flowSet20": "Select",
+        "flowSet21": "Role is required",
+        "flowSet22": "Flow is required",
+        "flowSet23": "Role",
+        "flowSet24": "User",
+        "flowSet25": "Flow",
+        "flowSet26": "Stage Setting",
+        "flowSet27": "User is required"
+    }
+}
