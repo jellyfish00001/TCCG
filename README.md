@@ -1,2 +1,0 @@
-# TCCG
-TCCG專案
