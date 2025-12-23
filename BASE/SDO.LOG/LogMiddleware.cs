@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using System.Text;
 using System.IO;
-using Microsoft.Extensions.Logging;
-using SDO.Services;
-using SDO.Models;
 using System.Text.Json;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Builder;
-using SDO.Utils;
-using SDO.Dac;
 using SDO.LOG.Models;
+using SDO.Services;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using SDO.Utils;
+using Microsoft.Extensions.Logging;
+using SDO.Dac;
+using SDO.Models;
 
 namespace SDO.LOG.Middleware
 {

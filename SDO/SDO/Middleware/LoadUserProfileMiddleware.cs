@@ -27,7 +27,7 @@ namespace SDO.Middleware
             this.logger = logger;
         }
 
-        public async Task InvokeAsync(HttpContext httpContext, ISCUserDac scUserDac, IUserProfile userProfile, IDimRoleDac roleDac)
+        public async Task InvokeAsync(HttpContext httpContext, IUserProfile userProfile)
         {
             RouteData routeData = httpContext.GetRouteData();
             string controllerName = routeData.Values["controller"]?.ToString();
@@ -63,23 +63,6 @@ namespace SDO.Middleware
                     }
                     
                 }
-
-                SCUserModel user = await scUserDac.GetUserById(httpContext.User.Identity.Name);
-                //使用者角色
-                List<DimRoleModel> roleModel = await roleDac.ReadListByUser(user.USER_ID);
-                user.Roles = roleModel.Select(x => x.ROLE_ID).ToList();
-
-                //代理人邏輯
-                if (httpContext.User.HasClaim(claim => "Agent".Equals(claim.Type)))
-                {
-                    string agentId = httpContext.User.FindFirstValue("Agent");
-                    SCUserModel userAgent = await scUserDac.GetUserById(agentId);
-
-                    user.AGENT_ID = agentId;
-                    user.USER_NAME = string.Format("{0}({1})", user.USER_NAME, userAgent.USER_NAME);
-                }
-                if(!_allowAnonymous)
-                    userProfile.SetLoginUser(user);
             }
 
             await next.Invoke(httpContext);

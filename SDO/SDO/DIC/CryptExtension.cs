@@ -1,6 +1,5 @@
 ﻿using SDO.Services;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using SDO.CryptSet.Extension;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -8,7 +7,6 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddCrypt(this IServiceCollection services)
         {
-            services.AddCryptSetApi();
 
             //Transient
             //每次注入時，都重新 new 一個新的實例。

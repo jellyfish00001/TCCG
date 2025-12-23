@@ -24,7 +24,7 @@ namespace SDO.Middleware
             this.next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context, IAccessService accessService, IUserProfile userProfile)
+        public async Task InvokeAsync(HttpContext context, IUserProfile userProfile)
         {
             var ReqContentType = context.Request.Headers["Content-Type"].ToString();
             if (ReqContentType.Contains("multipart/form-data"))

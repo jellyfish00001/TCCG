@@ -1,4 +1,5 @@
 ﻿using Aspose.Words;
+using Aspose.Words.Comparing;
 using Aspose.Words.Layout;
 using Autofac;
 using SDO.ReportBuilder.Interface;
@@ -81,11 +82,8 @@ namespace SDO.ReportBuilder.Services
 
             if (docs.Count > 1)
             {
-                CompareOptions options = new CompareOptions();
-                options.Target = ComparisonTargetType.New;
-
                 // 比對文件
-                docs[0].Compare(docs[1], "SYSTEM", DateTime.Now, options);
+                docs[0].Compare(docs[1], "SYSTEM", DateTime.Now);
                
                 docs[0].LayoutOptions.RevisionOptions.DeletedTextEffect = RevisionTextEffect.None;
                 docs[0].LayoutOptions.RevisionOptions.InsertedTextEffect = RevisionTextEffect.None;

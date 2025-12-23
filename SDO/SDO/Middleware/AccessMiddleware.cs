@@ -28,7 +28,7 @@ namespace SDO.Middleware
             this.logger = logger;
         }
 
-        public async Task InvokeAsync(HttpContext context, IAccessService accessService, IUserProfile userProfile)
+        public async Task InvokeAsync(HttpContext context, IUserProfile userProfile)
         {
             RouteData routeData = context.GetRouteData();
             string controllerName = routeData.Values["controller"]?.ToString();

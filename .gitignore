@@ -1,0 +1,15 @@
+﻿BASE/i18N/i18N/bin
+BASE/i18N/i18N/obj
+BASE/SDO.Base/bin
+BASE/SDO.Base/obj
+BASE/SDO.Dac/bin
+BASE/SDO.Dac/obj
+BASE/SDO.LOG/bin
+BASE/SDO.LOG/obj
+BASE/SDO.XlsReader/bin
+BASE/SDO.XlsReader/obj
+SDO/.vs
+SDO/SDO/bin
+SDO/SDO/obj
+SDO/SDO.APP/bin
+SDO/SDO.APP/obj

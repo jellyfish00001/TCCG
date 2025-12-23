@@ -21,16 +21,14 @@ namespace SDO.Middleware
         private readonly RequestDelegate next;
         private readonly ILogger<LoginTokenRefreshMiddleware> logger;
         private readonly IHttpContextAccessor httpContextAccessor;
-        private ISystemInfoService systemInfo;
-        public LoginTokenRefreshMiddleware(RequestDelegate next, ILogger<LoginTokenRefreshMiddleware> logger, IHttpContextAccessor httpContextAccessor, ISystemInfoService systemInfo)
+        public LoginTokenRefreshMiddleware(RequestDelegate next, ILogger<LoginTokenRefreshMiddleware> logger, IHttpContextAccessor httpContextAccessor)
         {
             this.next = next;
             this.logger = logger;
             this.httpContextAccessor = httpContextAccessor;
-            this.systemInfo = systemInfo;
         }
 
-        public async Task InvokeAsync(HttpContext context, ITokenService tokenService, IUserProfile userProfile, ICache cache, IOptions<TokenSetting> tokenSettingOptions)
+        public async Task InvokeAsync(HttpContext context, IUserProfile userProfile, ICache cache)
         {
 
             await next(context);
@@ -53,19 +51,6 @@ namespace SDO.Middleware
                     }
                 }
 
-                SCUserModel user = (SCUserModel)userProfile.GetLoginUser();
-
-                string loginToken;
-
-                if (!tokenSettingOptions.Value.TokenRefresh && //不更新Token
-                    context.Request.Headers.TryGetValue("Authorization", out StringValues loginTokenContent)) //Authorization有值
-                    loginToken = loginTokenContent.ToString();
-                else
-                    loginToken = tokenService.GenJWTToken(user); //產出新Token
-
-                //將Token加在Header上
-                context.Response.Headers["Authorization"] = loginToken;
-
                 string cacheToken;
                 //判斷是否有cacheToken，若無則產生新的
                 if (context.Request.Headers.TryGetValue("CacheToken", out StringValues cacheTokenContent))
@@ -77,22 +62,11 @@ namespace SDO.Middleware
                     cacheToken = Guid.NewGuid().ToString();
                 }
 
-                //打包cache資料
-                IDictionary<string, string> cacheData = new Dictionary<string, string>
-                {
-                    { "token", loginToken },
-                    { "user", user.USER_ID },
-                    { "ip", user.USER_IP },
-                    {"agentId",user.AGENT_ID },
-                    {"ExpireTime",systemInfo.GetCacheExpireTime() }
-                };
-
                 _ = Task.Run(async () =>
                 {
                     try
                     {
                         //將cache資料寫入cache中
-                        await cache.SetStringCache(cacheToken.ToString(), JsonSerializer.Serialize(cacheData));
                     }
                     catch (Exception ex)
                     {

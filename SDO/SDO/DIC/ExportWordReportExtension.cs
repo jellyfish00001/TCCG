@@ -17,7 +17,6 @@ namespace Microsoft.Extensions.DependencyInjection
             //被實例化後就不會消失，程式運行期間只會有一個實例。
             //加入WordSet套版底層
             services.TryAddTransient<IWordSetService, WordSetService>();
-            services.TryAddTransient<IExportWordReportService, ExportWordReportService>();
             return services;
         }
     }

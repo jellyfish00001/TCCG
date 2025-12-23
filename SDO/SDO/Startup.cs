@@ -9,14 +9,11 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SDO.AsposeSet.Extension;
 using SDO.Authentication;
-using SDO.CryptSet.Extension;
 using SDO.Filters;
 using SDO.Middleware;
 using SDO.Models;
 using SDO.Services;
-using SDO.SqlMaker;
 using SDO.Dac;
 using System;
 using System.IO;
@@ -81,7 +78,6 @@ namespace SDO
             });
 
             //將TokenSetting加入Configure中，方便後續注入
-            services.Configure<TokenSetting>(Configuration.GetSection("TokenSetting"));
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.ForwardedHeaders =
@@ -116,9 +112,6 @@ namespace SDO
             //加入UserProfile功能 存取User資料
             services.AddUserProfile();
 
-            //加入BasicSqlMaker功能
-            services.AddTransient<IBasicSqlMaker, BasicSqlMaker>();
-
             //加入XlsReader
             services.TryAddTransient<IXlsService, XlsService>();
 
@@ -152,9 +145,6 @@ namespace SDO
             //加入公告填寫功能
             services.AddAnnouncement();
 
-            //加入AsposeSetApi功能
-            services.AddAsposeSetApi();
-
             //加入Excel套版功能
             services.AddAsposeExcelSet();
 
@@ -179,7 +169,6 @@ namespace SDO
             //加入效能監控功能(生命週期需為Singleton)  注意: 此Service限Windows，且須特殊權限
             //services.TryAddSingleton<IPerformanceService>(new PerformanceService());
             //加入加解密API
-            services.AddCryptSetApi();
 
             //加入加解密功能
             services.AddCrypt();
@@ -197,7 +186,6 @@ namespace SDO
             services.AddOfficialDoc();
 
             //加入憑證解析功能
-            services.TryAddTransient<IHiPKIService, HiPKIService>();
 
             services.AddAuthentication(x =>
             {
@@ -348,7 +336,6 @@ namespace SDO
                 new string[] { "SqlMaker" }};
 
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-            builder.RegisterType<SCLoginService>();
             foreach (var assembly in myAssemblies)
             {
                 int idx = 0;

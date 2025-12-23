@@ -8,7 +8,6 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddUploadFile(this IServiceCollection services)
         {
-            services.AddDac<IUploadFileDac, UploadFileDac>();
             //Transient
             //每次注入時，都重新 new 一個新的實例。
             //Scoped 
@@ -16,7 +15,6 @@ namespace Microsoft.Extensions.DependencyInjection
             //Singleton
             //被實例化後就不會消失，程式運行期間只會有一個實例。
             services.TryAddTransient<IFTPService, SFTPService>();
-            services.TryAddTransient<IUploadFileService, UploadFileServiceFTP>();
 
             return services;
         }
