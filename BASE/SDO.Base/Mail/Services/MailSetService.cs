@@ -9,7 +9,7 @@ using System.Threading;
 using System.Net.Mail;
 using System.Web;
 using System.Reflection;
-using SDO.CryptSet;
+//using SDO.CryptSet;
 using System.IO;
 using System.ComponentModel;
 
@@ -23,7 +23,7 @@ namespace SDO.Services
         private readonly ISetParamService setParam;
         private SMTPSettingModel SmtpSet;
         private List<SetParamModel> MailSetting;
-        private readonly IEncryptService encrypt;
+        //private readonly IEncryptService encrypt;
         /// <summary>
         /// 完整資訊
         /// </summary>
@@ -32,14 +32,14 @@ namespace SDO.Services
         /// <param name="setParam"></param>
         /// <param name="mailLog"></param>
         /// <param name="encrypt"></param>
-        public MailSetService(IMailSetDac dac, IUserProfile userProfile, ISetParamService setParam, IMailLogService mailLog, IEncryptService encrypt)
+        public MailSetService(IMailSetDac dac, IUserProfile userProfile, ISetParamService setParam, IMailLogService mailLog/*, IEncryptService encrypt*/)
         {
             this.dac = dac;
             this.userProfile = userProfile;
             this.setParam = setParam;
             this.mailLog = mailLog;
             GetSmtpSetting();
-            this.encrypt = encrypt;
+            //this.encrypt = encrypt;
         }
         /// <summary>
         /// 不需要個人訊息
@@ -48,13 +48,13 @@ namespace SDO.Services
         /// <param name="setParam"></param>
         /// <param name="mailLog"></param>
         /// <param name="encrypt"></param>
-        public MailSetService(IMailSetDac dac, ISetParamService setParam, IMailLogService mailLog, IEncryptService encrypt)
+        public MailSetService(IMailSetDac dac, ISetParamService setParam, IMailLogService mailLog/*, IEncryptService encrypt*/)
         {
             this.dac = dac;
             this.setParam = setParam;
             this.mailLog = mailLog;
             GetSmtpSetting();
-            this.encrypt = encrypt;
+            //this.encrypt = encrypt;
         }
         /// <summary>
         /// 不需要加密
@@ -62,13 +62,13 @@ namespace SDO.Services
         /// <param name="dac"></param>
         /// <param name="setParam"></param>
         /// <param name="mailLog"></param>
-        public MailSetService(IMailSetDac dac, ISetParamService setParam, IMailLogService mailLog)
-        {
-            this.dac = dac;
-            this.setParam = setParam;
-            this.mailLog = mailLog;
-            GetSmtpSetting();
-        }
+        //public MailSetService(IMailSetDac dac, ISetParamService setParam, IMailLogService mailLog)
+        //{
+        //    this.dac = dac;
+        //    this.setParam = setParam;
+        //    this.mailLog = mailLog;
+        //    GetSmtpSetting();
+        //}
         /// <summary>
         /// 取得smtp設定
         /// </summary>

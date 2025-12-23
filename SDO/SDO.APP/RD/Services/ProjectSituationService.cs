@@ -13,22 +13,16 @@ namespace SDO.Services
     public class ProjectSituationService : Service, IProjectSituationService
     {
         private readonly IProjectSituationDac dac;
-        private readonly IProjectCommonService projectCommonService;
-        private readonly IProjectCommonDac projectCommonDac;
         private readonly IRDProjectAuditService projectAuditService;
         private readonly IRDProjectAuditDac projectAuditDac;
         public ProjectSituationService(
             IRDProjectAuditService projectAuditService,
             IRDProjectAuditDac projectAuditDac,
-            IProjectSituationDac dac,
-            IProjectCommonService projectCommonService,
-            IProjectCommonDac projectCommonDac)
+            IProjectSituationDac dac)
         {
             this.projectAuditService = projectAuditService;
             this.projectAuditDac = projectAuditDac;
             this.dac = dac;
-            this.projectCommonService = projectCommonService;
-            this.projectCommonDac = projectCommonDac;
         }
 
         /// <summary>
@@ -43,16 +37,6 @@ namespace SDO.Services
             // 判斷 model 是不是 null，是 null 底下撈資料就會死
             if (model != null)
             {
-                List<ProjectAttachmentModel> files = await projectCommonDac.GetProjectAttachmentList(new ProjectAttachmentQueryModel
-                {
-                    PROJECT_NO = planNo,
-                    // 01:相關檔案上傳、02:其他地方上傳
-                    FILE_UP_SOURCE = "01",
-                    FILE_KIND = new List<string> { "02" },
-                    // 6: RD 委託研究
-                    DB = (int)DBConnectionEnum.RDDBKey
-                });
-                model.FILE = files.FirstOrDefault();
             }
             else
             {
@@ -90,18 +74,6 @@ namespace SDO.Services
         {
             if(model != null)
             {
-                // 處理檔案
-                if (model.FILE != null)
-                {
-                    // 01:相關檔案上傳、02:其他地方上傳
-                    model.FILE.FILE_UP_SOURCE = "01";
-                    // 6: RD 委託研究
-                    model.FILE.DB = (int)DBConnectionEnum.RDDBKey;
-                    // 檔案存放資料夾名稱
-                    model.FILE.FOLDER_NAME = "RD";
-                    // 儲存檔案
-                    projectCommonService.SaveProjectFiles(model.FILE);
-                }
                 // 透過計畫編號撈取結案成果填報結果的資料
                 ResSituationModel resSituationModel = await GetRDResSituation(model.PLAN_NO);
                 if(resSituationModel != null)

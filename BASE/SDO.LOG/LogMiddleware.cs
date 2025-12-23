@@ -25,16 +25,14 @@ namespace SDO.LOG.Middleware
         private readonly ILogger<LogMiddleware> logger;
         private readonly IUserProfile userProfile;
         private readonly IWebHostEnvironment webHostEnvironment;
-        private readonly ISCUserDac scUserDac;
         private readonly IConfiguration Configuration;
         public LogMiddleware(RequestDelegate next, ILogger<LogMiddleware> logger, IUserProfile userProfile, IWebHostEnvironment webHostEnvironment,
-            ISCUserDac scUserDac, IConfiguration Configuration)
+            IConfiguration Configuration)
         {
             this.next = next;
             this.logger = logger;
             this.userProfile = userProfile;
             this.webHostEnvironment = webHostEnvironment;
-            this.scUserDac = scUserDac;
             this.Configuration = Configuration;
         }
 
@@ -107,8 +105,6 @@ namespace SDO.LOG.Middleware
                 if (context.User.Identity != null && !string.IsNullOrEmpty(context.User.Identity.Name))
                 {
                     Uid = context.User.Identity.Name;
-                    var user = await scUserDac.GetUserById(Uid, false);
-                    UserName = user.USER_NAME;
                 }
                 //Api Trace
                 if (apiTrace.RESPONSE_CODE != 404)

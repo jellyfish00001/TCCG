@@ -78,9 +78,5 @@ namespace SDO.Models
         /// </summary>
         public string LOCK_YN { get; set; }
 
-        /// <summary>
-        /// 檔案上傳
-        /// </summary>
-        public ProjectAttachmentModel FILE { set; get; }
     }
 }

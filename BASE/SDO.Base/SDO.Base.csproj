@@ -45,9 +45,9 @@
     <Reference Include="SDO.AsposeSet">
       <HintPath>..\..\library\SDO.AsposeSet.dll</HintPath>
     </Reference>
-    <Reference Include="SDO.CryptSet">
+    <!--<Reference Include="SDO.CryptSet">
       <HintPath>..\..\library\SDO.CryptSet.dll</HintPath>
-    </Reference>
+    </Reference>-->
   </ItemGroup>
 
 </Project>

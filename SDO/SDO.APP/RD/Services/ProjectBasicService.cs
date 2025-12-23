@@ -17,22 +17,16 @@ namespace SDO.Services
         private readonly IRDProjectAuditDac projectAuditDac;
         private readonly IProjectBasicDac dac;
         private readonly IUserProfile userProfile;
-        private readonly IProjectCommonService projectCommonService;
-        private readonly IProjectCommonDac projectCommonDac;
         public ProjectBasicService(
             IRDProjectAuditService projectAuditService,
             IRDProjectAuditDac projectAuditDac,
             IProjectBasicDac dac,
-            IUserProfile userProfile,
-            IProjectCommonService projectCommonService,
-            IProjectCommonDac projectCommonDac)
+            IUserProfile userProfile)
         {
             this.projectAuditService = projectAuditService;
             this.projectAuditDac = projectAuditDac;
             this.dac = dac;
             this.userProfile = userProfile;
-            this.projectCommonService = projectCommonService;
-            this.projectCommonDac = projectCommonDac;
         }
 
         /// <summary>
@@ -61,17 +55,6 @@ namespace SDO.Services
                 // 取得委託研究基本資料的評核指標資料
                 model.policyIndex = await dac.GetPolicyIndexData(PLAN_NO);
 
-                // 取得委託研究基本資料的檔案
-                List<ProjectAttachmentModel> files = await projectCommonDac.GetProjectAttachmentList(new ProjectAttachmentQueryModel
-                {
-                    PROJECT_NO = PLAN_NO,
-                    // 01:相關檔案上傳、02:其他地方上傳
-                    FILE_UP_SOURCE = "01",
-                    FILE_KIND = new List<string> { "01" },
-                    // 6: RD 委託研究
-                    DB = (int)DBConnectionEnum.RDDBKey
-                });
-                model.FILE = files.FirstOrDefault();
             }
             else
             {
@@ -94,18 +77,6 @@ namespace SDO.Services
             model.OU_ID = user.ORG_ID;
             // 計畫編號
             string planNo = "";
-            // 處理檔案
-            if (model.FILE != null)
-            {
-                // 01:相關檔案上傳、02:其他地方上傳
-                model.FILE.FILE_UP_SOURCE = "01";
-                // 6: RD 委託研究
-                model.FILE.DB = (int)DBConnectionEnum.RDDBKey;
-                // 檔案存放資料夾名稱
-                model.FILE.FOLDER_NAME = "RD";
-                // 儲存檔案
-                projectCommonService.SaveProjectFiles(model.FILE);
-            }
             using (TransactionScope scope = new(TransactionScopeAsyncFlowOption.Enabled))
             {
                 // 判斷新增計畫還是編輯計畫

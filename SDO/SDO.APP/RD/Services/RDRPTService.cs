@@ -15,14 +15,10 @@ namespace SDO.Services
     public class RDRPTService : Service, IRDRPTService
     {
         private readonly IReportFactory rpt;
-        private readonly IProjectDac projectDac;
-        private readonly IStatisticsService statisticsService;
 
-        public RDRPTService(IReportFactory rpt, IProjectDac projectDac, IStatisticsService statisticsService)
+        public RDRPTService(IReportFactory rpt)
         {
             this.rpt = rpt;
-            this.projectDac = projectDac;
-            this.statisticsService = statisticsService;
         }
 
         private async Task<RtnRptModel> CreateRPT(RptParameter param)

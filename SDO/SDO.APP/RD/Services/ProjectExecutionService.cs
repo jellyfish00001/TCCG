@@ -15,21 +15,15 @@ namespace SDO.Services
         private readonly IProjectExecutionDac dac;
         private readonly IRDProjectAuditService projectAuditService;
         private readonly IRDProjectAuditDac projectAuditDac;
-        private readonly IProjectCommonDac projectCommonDac;
-        private readonly IProjectCommonService projectCommonService;
         public ProjectExecutionService(
             IRDProjectAuditService projectAuditService,
             IRDProjectAuditDac projectAuditDac,
-            IProjectExecutionDac dac,
-            IProjectCommonDac projectCommonDac,
-            IProjectCommonService projectCommonService
+            IProjectExecutionDac dac
         )
         {
             this.projectAuditService = projectAuditService;
             this.projectAuditDac = projectAuditDac;
             this.dac = dac;
-            this.projectCommonService = projectCommonService;
-            this.projectCommonDac = projectCommonDac;
         }
 
         /// <summary>
@@ -54,16 +48,6 @@ namespace SDO.Services
             // 判斷 model 是不是 null，是 null 底下撈資料就會死
             if (model != null)
             {
-                // 取得執行情形明細資料的檔案
-                List<ProjectAttachmentModel> files = await projectCommonDac.GetProjectAttachmentList(new ProjectAttachmentQueryModel
-                {
-                    PROJECT_NO = model.PLAN_NO,
-                    FILE_UP_SOURCE = "01",
-                    FILE_KIND = new List<string> { "03" },
-                    SOURCE_ID = SEQ,
-                    DB = (int)DBConnectionEnum.RDDBKey
-                });
-                model.FILE = files.FirstOrDefault();
             }
             else
             {
@@ -82,23 +66,6 @@ namespace SDO.Services
         {
             if(model != null)
             {
-                // 判斷有無檔案
-                if (string.IsNullOrEmpty(model.FILE.FILE_KIND))
-                {
-                    // 01:相關檔案上傳、02:其他地方上傳
-                    model.FILE.FILE_UP_SOURCE = "01";
-                    // 6: RD 委託研究
-                    model.FILE.DB = (int)DBConnectionEnum.RDDBKey;
-                    // 檔案序號
-                    model.FILE.SOURCE_ID = model.SEQ;
-                    // 檔案存放資料夾名稱
-                    model.FILE.FOLDER_NAME = "RD";
-
-                    List<ProjectAttachmentModel> fileList = new();
-                    fileList.Add(model.FILE);
-                    // 儲存檔案
-                    projectCommonService.SaveProjectFiles(model.FILE);
-                }
                 using (TransactionScope scope = new(TransactionScopeAsyncFlowOption.Enabled))
                 {
                     // 儲存執行情形

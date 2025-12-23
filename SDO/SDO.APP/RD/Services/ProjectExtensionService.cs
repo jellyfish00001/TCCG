@@ -15,25 +15,19 @@ namespace SDO.Services
     {
         private readonly IProjectExtensionDac projectExtensionDac;
         private readonly IUserProfile userProfile;
-        private readonly IProjectCommonDac projectCommonDac;
-        private readonly IProjectCommonService projectCommonService;
         private readonly IRDProjectAuditService projectAuditService;
         private readonly IRDProjectAuditDac projectAuditDac;
         public ProjectExtensionService(
             IRDProjectAuditService projectAuditService,
             IRDProjectAuditDac projectAuditDac,
             IProjectExtensionDac projectExtensionDac,
-            IUserProfile userProfile,
-            IProjectCommonDac projectCommonDac,
-            IProjectCommonService projectCommonService
+            IUserProfile userProfile
         )
         {
             this.projectAuditService = projectAuditService;
             this.projectAuditDac = projectAuditDac;
-            this.projectCommonService = projectCommonService;
             this.userProfile = userProfile;
             this.projectExtensionDac = projectExtensionDac;
-            this.projectCommonDac = projectCommonDac;
         }
 
         /// <summary>
@@ -60,16 +54,6 @@ namespace SDO.Services
             {
                 // 取得展延紀錄明細的評核指標資料
                 model.policyIndex = await projectExtensionDac.GetExtensionPolicyIndexData(EXTENSION_NO);
-                // 取得展延紀錄的檔案
-                List<ProjectAttachmentModel> files = await projectCommonDac.GetProjectAttachmentList(new ProjectAttachmentQueryModel
-                {
-                    PROJECT_NO = model.PLAN_NO,
-                    FILE_UP_SOURCE = "01",
-                    FILE_KIND = new List<string> { "05" },
-                    SOURCE_ID = model.EXTENSION_ID,
-                    DB = (int)DBConnectionEnum.RDDBKey
-                });
-                model.FILE = files.FirstOrDefault();
             }
             else
             {
@@ -182,20 +166,6 @@ namespace SDO.Services
                         }
                     }
                     scope.Complete();
-                }
-                // 儲存檔案
-                if (model.FILE != null)
-                {
-                    // 01:相關檔案上傳、02:其他地方上傳
-                    model.FILE.FILE_UP_SOURCE = "01";
-                    // 6: RD 委託研究
-                    model.FILE.DB = (int)DBConnectionEnum.RDDBKey;
-                    // 檔案序號
-                    model.FILE.SOURCE_ID = model.EXTENSION_ID;
-                    // 檔案存放資料夾名稱
-                    model.FILE.FOLDER_NAME = "RD";
-                    // 儲存檔案
-                    projectCommonService.SaveProjectFiles(model.FILE);
                 }
             }
             return extensionNo;

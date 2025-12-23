@@ -65,10 +65,6 @@ namespace SDO.Models
         /// </summary>
         public string EXTENSION_STATUS_CODE { get; set; }
 
-        /// <summary>
-        /// 檔案上傳
-        /// </summary>
-        public ProjectAttachmentModel FILE { set; get; }
 
         /// <summary>
         /// 展延紀錄評核指標

@@ -75,9 +75,5 @@ namespace SDO.Models
         /// </summary>
         public string RESULT_TYPE { get; set; }
 
-        /// <summary>
-        /// 檔案上傳
-        /// </summary>
-        public ProjectAttachmentModel FILE { set; get; }
     }
 }

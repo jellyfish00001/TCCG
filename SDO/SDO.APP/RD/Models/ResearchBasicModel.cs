@@ -80,10 +80,5 @@ namespace SDO.Models
         /// 代理人EMAIL
         /// </summary>
         public string ASSIGNE_EMAIL { get; set; }
-
-        /// <summary>
-        /// 檔案上傳
-        /// </summary>
-        public ProjectAttachmentModel FILE { set; get; }
     }
 }

@@ -3,21 +3,21 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Threading.Tasks;
-using SDO.CryptSet;
+//using SDO.CryptSet;
 using SDO.Models;
 namespace SDO.Utils
 {
     public class CaptchaService : ICaptcha
     {
-        private readonly IEncryptService EncryptService;
-        private readonly IDecryptService DecryptService;
+        //private readonly IEncryptService EncryptService;
+        //private readonly IDecryptService DecryptService;
         private readonly ISecureRandomNum randomNum;
         private readonly ISysParam sysParam;
 
-        public CaptchaService(IEncryptService EncryptService, IDecryptService DecryptService, ISecureRandomNum randomNum, ISysParam sysParam)
+        public CaptchaService(/*IEncryptService EncryptService, IDecryptService DecryptService,*/ ISecureRandomNum randomNum, ISysParam sysParam)
         {
-            this.EncryptService = EncryptService;
-            this.DecryptService = DecryptService;
+            //this.EncryptService = EncryptService;
+            //this.DecryptService = DecryptService;
             this.randomNum = randomNum;
             this.sysParam = sysParam;
         }
@@ -34,10 +34,10 @@ namespace SDO.Utils
             var ImgBse64 = Convert.ToBase64String(GenerateValidateImage(validateNum));
             validateNum = $"{validateNum}&{DateTimeUtil.GMT8.AddMinutes(5).ToString("yyyyMMddHHmmss")}";
 
-            var encryptCaptcha = EncryptService.AES256(validateNum).encryptedString;
+            //var encryptCaptcha = EncryptService.AES256(validateNum).encryptedString;
             var captcha = new CaptchaModel
             {
-                CaptchaEncode = encryptCaptcha,
+                CaptchaEncode = validateNum, // 暫時不使用加密
                 Img = ImgBse64
             };
             return captcha;
@@ -102,7 +102,8 @@ namespace SDO.Utils
                 return true;
             }
             //解析encode字串
-            string decodeStr = DecryptService.AES256(encodeCaptcha).decryptedString; // 解密
+            //string decodeStr = DecryptService.AES256(encodeCaptcha).decryptedString; // 解密
+            string decodeStr = encodeCaptcha; // 暫時不使用解密
             string[] decodeArray = decodeStr.Split("&");
             //如果拆字串有少代表少了時間戳記或是驗證碼
             if (decodeArray.Length != 2)

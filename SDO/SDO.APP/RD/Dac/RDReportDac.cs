@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using SDO.APP.IPC.Models.Statistics;
 using SDO.APP.RD.Models.Report;
 using SDO.Models;
 using SDO.Services;
